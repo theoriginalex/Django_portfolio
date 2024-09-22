@@ -1,0 +1,111 @@
+/* Estilos generales del body */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: linear-gradient(180deg, #000 10%, transparent 90%);
+    background-repeat: no-repeat; /* Evita que el gradient se repita */
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Sección de inicio */
+.inicio {
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+/* Contenedor de proyectos */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+    gap: 30px; /* Espacio entre columnas */
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 1200px; /* Ancho máximo del contenedor */
+}
+
+/* Estilos de cada proyecto */
+.project {
+    background: #111;
+    color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo para las imágenes */
+.project img {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.4);
+}
+
+/* Títulos */
+.project h1 {
+    font-size: 2em;
+    color: #7c27fc;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Texto descriptivo */
+.project p {
+    color: #b0bec5;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Botón estilo */
+.project button, .inicio button {
+    background-color: #7c27fc;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project button:hover, .inicio button:hover{
+    background-color: #7c27fc;
+    transform: translateY(-3px);
+}
+
+/* Estilo para el enlace dentro del botón */
+.project button a, .inicio button a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.project button a:hover, .inicio button a:hover {
+    color: #bbdefb;
+}

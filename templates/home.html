@@ -1,0 +1,27 @@
+{% extends 'layouts/base.html' %}
+
+{% block 'styles' %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="inicio">
+        <h1>I am <strong>Alex Chica</strong></h1>
+        <h3>I am Python FullStack Developer</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, provident obcaecati consequatur minima praesentium atque doloribus eaque nulla reprehenderit quibusdam, quas quod fuga repellat, labore accusamus excepturi cumque cupiditate voluptatum asperiores corporis iure fugiat nam voluptate et. Cumque corrupti illo eveniet, nulla quos iure culpa reprehenderit quisquam ducimus repellendus impedit, non tempore consequuntur necessitatibus voluptate sequi. Hic molestias repellendus adipisci nesciunt dolores corrupti ipsam perferendis fugiat nam iste vitae fuga ipsum, libero suscipit sed soluta quam minus quia possimus voluptatibus sapiente itaque sint rem. Error deserunt, voluptas possimus eum nam ex non, reprehenderit adipisci, natus iste cupiditate nulla harum cumque!</p>
+        <button><a href="{% static 'curriculum/cv.pdf' %}" target="_blank">Descargar CV</a></button>
+    </div>
+
+    <!-- Contenedor de los proyectos -->
+    <div class="project-container">
+        {% for i in projects %}
+            <div class="project">
+                <h1>{{ i.titulo }}</h1>
+                <img src="{{ i.imagen.url }}" alt="" height="300px">
+                <p>Descripción: {{ i.descripcion }}</p>
+                <button><a href="{{ i.url }}" target="_blank">{{ i.titulo }}</a></button><!-- Botón con enlace -->
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

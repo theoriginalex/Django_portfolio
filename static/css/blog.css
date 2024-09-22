@@ -1,0 +1,104 @@
+/* Estilos generales del body */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background: linear-gradient(180deg, #000 10%, transparent 90%);
+    background-repeat: no-repeat; /* Evita que el gradient se repita */
+    background-attachment: fixed; /* Hace que el fondo esté fijo cuando se hace scroll */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+/* Contenedor de todos los posts */
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10%;
+}
+
+/* Tarjeta de post */
+.post-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1000px;
+    transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+    transform: scale(1.02);
+}
+
+/* Imagen del post */
+.post-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px; /* Reduce el margen entre la imagen y el texto */
+}
+
+/* Detalles del post */
+.post-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    flex-grow: 1; /* Hace que la parte de los detalles ocupe el espacio restante */
+}
+
+/* Estilo del título */
+.post-details h2 {
+    font-size: 1.8em;
+    color: #7c27fc;
+    margin-bottom: 5px; /* Reduce el espacio debajo del título */
+}
+
+/* Descripción del post */
+.post-details p {
+    font-size: 1.1em;
+    margin-bottom: 5px; /* Reduce el espacio debajo de la descripción */
+    color: #b0bec5;
+}
+
+/* Fecha del post */
+.post-date {
+    font-size: 0.9em;
+    color: #757575;
+    margin-bottom: 10px;
+}
+
+/* Botón de leer más */
+.post-button {
+    background-color: #7c27fc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+}
+
+.post-button:hover {
+    background-color: #e51ee5;
+}
